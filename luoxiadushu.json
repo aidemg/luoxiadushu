@@ -1,0 +1,50 @@
+[
+  {
+    "bookSourceComment": "落霞读书 https://luoxiadushu.com/ 。2026-10-09按公开页面结构制作。书籍详情页可正常读取作者、类型、状态、简介和章节列表；章节正文为独立.htm页面。站内搜索接口未从公开页面确认，因此搜索规则采用常见兼容路径，若站点后续开放明确搜索接口可再更新。",
+    "bookSourceGroup": "落霞读书",
+    "bookSourceName": "落霞读书",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://luoxiadushu.com/",
+    "bookUrlPattern": "https://luoxiadushu.com/[^/]+/|https://luoxiadushu.com/[^/]+/[^/]+\\.htm",
+    "concurrentRate": "1",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": false,
+    "enabledReview": false,
+    "exploreUrl": "",
+    "header": "User-Agent: Mozilla/5.0",
+    "lastUpdateTime": 0,
+    "loginCheckJs": "",
+    "loginUi": "",
+    "loginUrl": "",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "name": "h1@text",
+      "author": "##作者：\\s*([^\\n]+)##$1",
+      "kind": "##类型：\\s*([^\\n]+)##$1",
+      "intro": "##作品简介：\\s*([\\s\\S]*?)(?=❀|##)",
+      "coverUrl": "img@src",
+      "lastChapter": "##最新章节：\\s*([^\\n]+)##$1"
+    },
+    "ruleContent": {
+      "content": "##(?s)(?<=\\n)(?!上一章：|下一章：).*##$0",
+      "title": "h1@text"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "bookList": "body",
+      "name": "h1@text",
+      "author": "##作者：\\s*([^\\n]+)##$1",
+      "bookUrl": "a@href",
+      "kind": "##类型：\\s*([^\\n]+)##$1"
+    },
+    "ruleToc": {
+      "chapterList": "a[href$='.htm']",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "https://luoxiadushu.com/search/?keyword={{java.encodeURI(key)}}",
+    "weight": 0
+  }
+]
