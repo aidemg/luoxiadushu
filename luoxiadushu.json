@@ -1,1 +1,37 @@
 
+{
+  "bookSourceName": "落霞读书",
+  "bookSourceGroup": "文学经典",
+  "bookSourceUrl": "https://luoxiadushu.com",
+  "bookSourceType": 0,
+  "enabled": true,
+  "enabledExplore": true,
+  "searchUrl": "/search.php?keyword={key}&page={page}",
+  "exploreUrl": "世界名著::/world/##古典文学::/classic/##现代文学::/modern/##当代文学::/contemporary/##科幻::/scifi/##武侠::/wuxia/##悬疑推理::/mystery/##言情::/romance/",
+  "header": "{\"User-Agent\":\"Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36\"}",
+  "ruleSearch": {
+    "bookList": "class.book-list@tag.li",
+    "name": "tag.a.0@text",
+    "author": "class.author@text",
+    "kind": "class.category@text",
+    "bookUrl": "tag.a.0@href",
+    "coverUrl": "tag.img.0@src"
+  },
+  "ruleBookInfo": {
+    "name": "class.book-title@tag.h1@text",
+    "author": "class.book-info@tag.span.0@text",
+    "kind": "class.book-info@tag.span.1@text",
+    "intro": "class.book-intro@text",
+    "coverUrl": "class.book-cover@tag.img.0@src",
+    "tocUrl": "class.read-btn@tag.a.0@href"
+  },
+  "ruleToc": {
+    "chapterList": "class.chapter-list@tag.li",
+    "chapterName": "tag.a@text",
+    "chapterUrl": "tag.a@href"
+  },
+  "ruleContent": {
+    "content": "class.content@html",
+    "nextContentUrl": ""
+  }
+}
